@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>JSON Tester</title>
+	<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="statment_V1.js"></script>
+</head>
+
+<body>
+<h1>JSON Tester</h1>
+<script>
+
+	var playsJson = '{"hamlet": {"name": "Hamlet","type": "tragedy"},"as-like": {"name": "As You Like It","type": "comedy"},"othello": {"name": "Othello","type": "tragedy"}}';
+	
+	var invoicesJson = '{"customer": "BigCo","performances": [{"playID": "hamlet","audience": 55},{"playID": "as-like","audience": 35},{"playID": "othello","audience": 40}]}';
+	
+	var invoices = JSON.parse(invoicesJson);
+	var plays = JSON.parse(playsJson);
+	
+	statement(invoices,plays)
+/*
+Statement for BigCo
+Hamlet: $650.00 (55 seats)
+As You Like It: $580.00 (35 seats)
+Othello: $500.00 (40 seats)
+Amount owed is $1,730.00
+You earned 47 credits
+*/
+</script>
+
+</body>
+</html>
