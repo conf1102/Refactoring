@@ -3,7 +3,7 @@ function statement(invoice, plays) {
     let result = 'Statement for '+invoice.customer+'\n';
     for (let perf of invoice.performances) {
         // print line for this order
-        result += playFor(perf).name + ':'+ usd(amountFor(perf)/100)+' ('+perf.audience+' seats)\n';
+        result += playFor(perf).name + ':'+ usd(amountFor(perf))+' ('+perf.audience+' seats)\n';
         totalAmount += amountFor(perf);
     }
     let volumeCredits = 0;
@@ -50,5 +50,5 @@ function volumeCreditsFor(aPerformance) {
 }
 
 function usd(aNumber) {
-    return new Intl.NumberFormat("en-US",{ style: "currency", currency: "USD",minimumFractionDigits: 2 }).format(aNumber);
+    return new Intl.NumberFormat("en-US",{ style: "currency", currency: "USD",minimumFractionDigits: 2 }).format(aNumber/100);
 }
