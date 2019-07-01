@@ -6,7 +6,7 @@ function statement(invoice, plays) {
         result += playFor(perf).name + ':'+ usd(amountFor(perf))+' ('+perf.audience+' seats)\n';
         totalAmount += amountFor(perf);
     }
-    result += 'Amount owed is '+usd(totalAmount/100)+'\n';
+    result += 'Amount owed is '+usd(totalAmount)+'\n';
     result += 'You earned '+totalVolumeCredits(invoice)+' credits\n';
 	alert(result);
     return result;
