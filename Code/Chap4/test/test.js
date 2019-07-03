@@ -1,3 +1,4 @@
+var Province = require('./Province.js');
 function sampleProvinceData() {
   return {
     name: "Asia",
@@ -11,10 +12,9 @@ function sampleProvinceData() {
   };
 }
 var assert = require('assert');
-describe('provinceTest', function () {
+describe('provinceTest1', function () {
   it('shortfall', function () {
-    var Province = require('./Province.js');
-    var asia1 = new Province(sampleProvinceData());
-    assert.equal(asia1.shortfall, 5);
+    var asia = new Province(sampleProvinceData());
+    assert.equal(asia.shortfall, 5);
   });
 });
