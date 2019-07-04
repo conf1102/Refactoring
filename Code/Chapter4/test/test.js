@@ -14,7 +14,7 @@ function sampleProvinceData() {
 }
 describe('provinceTest1', function () {
   it('shortfall', function () {
-    var asia = new Province(sampleProvinceData());
+    const asia = new Province(sampleProvinceData());
     expect(asia.shortfall).equals(5);
   });
 });
