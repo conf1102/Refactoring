@@ -19,13 +19,16 @@ describe('provinceTest1', function () {
   });
 });
 
-describe('provinceTest2', function() {
-  　it('shortfall', function() {
-  　　const asia = new Province(sampleProvinceData());
-  　　expect(asia.shortfall).equal(5);
-  　});
-  　it('profit', function() {
-  　　const asia = new Province(sampleProvinceData());
-  　　expect(asia.profit).equal(230);
-  　});
+describe('provinceTest2', function () {
+  let asia;
+  this.beforeEach(function(){
+    asia = new Province(sampleProvinceData()); 
   });
+
+  it('shortfall', function () {
+    expect(asia.shortfall).equal(5);
+  });
+  it('profit', function () {
+    expect(asia.profit).equal(230);
+  });
+});
