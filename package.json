@@ -1,0 +1,25 @@
+{
+  "name": "Refactoring",
+  "version": "1.0.0",
+  "description": "Refactoring Book Code",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conf1102/Refactoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conf1102/Refactoring/issues"
+  },
+  "homepage": "https://github.com/conf1102/Refactoring#readme"
+}
