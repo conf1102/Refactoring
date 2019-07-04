@@ -1,4 +1,5 @@
 var Province = require('./Province.js');
+var expect = require('chai').expect
 function sampleProvinceData() {
   return {
     name: "Asia",
@@ -11,10 +12,9 @@ function sampleProvinceData() {
     price: 20
   };
 }
-var assert = require('assert');
 describe('provinceTest1', function () {
   it('shortfall', function () {
     var asia = new Province(sampleProvinceData());
-    assert.equal(asia.shortfall, 5);
+    expect(asia.shortfall).equals(5);
   });
 });
