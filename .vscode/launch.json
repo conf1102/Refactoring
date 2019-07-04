@@ -12,7 +12,7 @@
             "args": [
                 "--opts",
                 "${workspaceFolder}/support/mocha.opts",
-                "${workspaceRoot}/Code/Chapter4/test/test.js"
+                "${workspaceRoot}/src/Chapter4/test/test.js"
             ],
             "cwd": "${workspaceRoot}",
             "internalConsoleOptions": "openOnSessionStart"
