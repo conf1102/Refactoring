@@ -18,3 +18,14 @@ describe('provinceTest1', function () {
     expect(asia.shortfall).equals(5);
   });
 });
+
+describe('provinceTest2', function() {
+  　it('shortfall', function() {
+  　　const asia = new Province(sampleProvinceData());
+  　　expect(asia.shortfall).equal(5);
+  　});
+  　it('profit', function() {
+  　　const asia = new Province(sampleProvinceData());
+  　　expect(asia.profit).equal(230);
+  　});
+  });
