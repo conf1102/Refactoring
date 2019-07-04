@@ -21,8 +21,8 @@ describe('provinceTest1', function () {
 
 describe('provinceTest2', function () {
   let asia;
-  this.beforeEach(function(){
-    asia = new Province(sampleProvinceData()); 
+  this.beforeEach(function () {
+    asia = new Province(sampleProvinceData());
   });
 
   it('shortfall', function () {
@@ -30,5 +30,11 @@ describe('provinceTest2', function () {
   });
   it('profit', function () {
     expect(asia.profit).equal(230);
+  });
+
+  it('change production', function () {
+    asia.producers[0].production = 20;
+    expect(asia.shortfall).equal(-6);
+    expect(asia.profit).equal(292);
   });
 });
