@@ -15,12 +15,20 @@ function trackSummary(points) {
         return result;
     }
     function distance(p1, p2) {
-         // ...
+        // ...
     }
-    function radians(degrees) {  
+    function radians(degrees) {
         // ... 
     }
-    function calculateTime() { 
-       // ... 
+    function calculateTime() {
+        // ... 
     }
+}
+
+function top_calculateDistance() {
+    let result = 0;
+    for (let i = 1; i < points.length; i++) {
+        result += distance(points[i - 1], points[i]);
+    }
+    return result;
 }
