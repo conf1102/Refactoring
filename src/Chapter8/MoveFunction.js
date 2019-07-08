@@ -8,11 +8,7 @@ function trackSummary(points) {
         pace: pace
     };
     function calculateDistance() {
-        let result = 0;
-        for (let i = 1; i < points.length; i++) {
-            result += distance(points[i - 1], points[i]);
-        }
-        return result;
+        return top_calculateDistance(points);
     }
     function calculateTime() {
         // ... 
